@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Proposal for Costa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .proposal-content::-webkit-scrollbar {
+            width: 8px;
+        }
+        .proposal-content::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        .proposal-content::-webkit-scrollbar-thumb {
+            background: #a8a8a8;
+            border-radius: 10px;
+        }
+        .proposal-content::-webkit-scrollbar-thumb:hover {
+            background: #7a7a7a;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 flex items-center justify-center min-h-screen">
+
+    <!-- Main page content -->
+    <div class="text-center p-4 max-w-2xl mx-auto">
+        <p class="text-sm text-gray-500 mb-6">
+            <span class="font-semibold">GoSystems Consulting</span>, <em class="italic">The Official Implementation Partner of SAS Academy AI</em>
+        </p>
+        <h1 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Costa Project Meeting</h1>
+        <p class="text-gray-600 mb-8">Click the button below to review the project proposal.</p>
+        
+        <div class="bg-white p-6 rounded-lg shadow-md mb-8 border border-gray-200">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+                <div>
+                    <h3 class="font-semibold text-gray-800">Proposed Start Date:</h3>
+                    <p class="text-gray-600">August 20, 2025</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-gray-800">Delivery Model:</h3>
+                    <p class="text-gray-600">Phased, weekly sprints for rapid results.</p>
+                </div>
+            </div>
+        </div>
+
+        <button id="openProposalBtn" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300 transition-transform transform hover:scale-105 w-full md:w-auto">
+            View Costa Custom Build Proposal
+        </button>
+    </div>
+
+    <!-- Full-screen Modal for the Proposal -->
+    <div id="proposalModal" class="hidden fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 z-50 transition-opacity duration-300">
+        <div id="proposalCard" class="bg-white rounded-2xl shadow-2xl w-full max-w-4xl max-h-[90vh] flex flex-col relative transform scale-95 transition-transform duration-300">
+            <!-- Header -->
+            <div class="p-6 border-b border-gray-200 flex justify-between items-center bg-gray-50 rounded-t-2xl">
+                <h2 class="text-2xl font-bold text-gray-900">Project Proposal</h2>
+                <button id="closeProposalBtn" class="text-gray-400 hover:text-gray-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+
+            <!-- Scrollable Content -->
+            <div class="p-8 overflow-y-auto proposal-content">
+                <div class="text-center mb-10">
+                    <h1 class="text-3xl font-bold text-gray-900 mb-2">Costa Operations Dashboard</h1>
+                    <p class="text-sm text-gray-500">
+                        <span class="font-semibold">Prepared For:</span> Costa
+                    </p>
+                </div>
+
+                <!-- Section 1: Goal -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold text-gray-800 border-b-2 border-blue-500 pb-2 mb-4">1. The Goal: From Prototype to Production</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        You've already seen the "Dummy Data" version of the dashboard. This project will build a fully functional, secure version of that tool powered by your own **real data**, delivering immediate value to your operations.
+                    </p>
+                </div>
+
+                <!-- Section 2: Phased Delivery & Investment -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold text-gray-800 border-b-2 border-blue-500 pb-2 mb-4">2. Phased Delivery & Investment</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        To deliver value as quickly as possible, we will use an agile, sprint-based approach. We will deliver a new, functional feature set each week. Each phase represents a distinct, manageable investment, allowing for clear budget control and simple approvals.
+                    </p>
+                    <div class="space-y-4">
+                        <!-- Week 1 -->
+                        <div class="p-4 border border-gray-200 rounded-lg">
+                            <h4 class="font-bold text-gray-800">Week 1: Foundation & Security (Aug 20 - Aug 27)</h4>
+                            <ul class="list-disc list-inside text-gray-600 mt-2">
+                                <li>Deploy application server on your dedicated Vercel account.</li>
+                                <li>Set up the secure database.</li>
+                                <li>Implement user authentication and security roles (Admin, Manager, etc.).</li>
+                            </ul>
+                        </div>
+                        <!-- Week 2 -->
+                        <div class="p-4 border border-gray-200 rounded-lg">
+                            <h4 class="font-bold text-gray-800">Week 2: Core Data Functionality (Aug 28 - Sep 3)</h4>
+                            <ul class="list-disc list-inside text-gray-600 mt-2">
+                                <li>Build the main client dashboard interface.</li>
+                                <li>Implement the data import feature from spreadsheets.</li>
+                            </ul>
+                        </div>
+                        <!-- Week 3 -->
+                        <div class="p-4 border border-gray-200 rounded-lg">
+                            <h4 class="font-bold text-gray-800">Week 3: Data Export & Hand-off (Sep 4 - Sep 10)</h4>
+                            <ul class="list-disc list-inside text-gray-600 mt-2">
+                                <li>Implement the data export feature for reporting.</li>
+                                <li>Create user documentation and conduct team training.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 3: Future Opportunities -->
+                <div class="mb-8 p-4 bg-gray-50 rounded-lg">
+                    <h3 class="text-xl font-semibold text-gray-800 border-b-2 border-blue-500 pb-2 mb-4">3. Future Opportunities</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        This dashboard is the foundation. This document is open for the inclusion of other elements, which can be scoped as future sprints:
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><strong>Maintenance Request App:</strong> A dedicated module for tracking maintenance.</li>
+                        <li><strong>Advanced Analytics & Reporting.</strong></li>
+                    </ul>
+                </div>
+
+                <!-- Section 4: Next Steps -->
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 border-b-2 border-blue-500 pb-2 mb-4">4. Next Steps</h3>
+                    <p class="text-gray-600 leading-relaxed bg-blue-50 p-4 rounded-lg">
+                        Upon your approval of the first sprint, <strong>GoSystems Consulting</strong> will begin work immediately. A formal Scope of Work (SOW) for the complete project will follow, detailing the budget for each subsequent phase.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const openBtn = document.getElementById('openProposalBtn');
+        const closeBtn = document.getElementById('closeProposalBtn');
+        const modal = document.getElementById('proposalModal');
+        const card = document.getElementById('proposalCard');
+
+        const showModal = () => {
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.add('opacity-100');
+                card.classList.remove('scale-95');
+                card.classList.add('scale-100');
+            }, 10);
+        };
+
+        const hideModal = () => {
+            modal.classList.remove('opacity-100');
+            card.classList.remove('scale-100');
+            card.classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        };
+
+        openBtn.addEventListener('click', showModal);
+        closeBtn.addEventListener('click', hideModal);
+
+        modal.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                hideModal();
+            }
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
+                hideModal();
+            }
+        });
+    </script>
+
+</body>
+</html>
